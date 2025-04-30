@@ -1,0 +1,1372 @@
+body{
+    background-image: url("../image/Gif1.gif");
+    background-color: #D9D9D9;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    background-repeat: no-repeat;
+    color: rgb(90, 90, 90);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transition: 3s;
+    zoom: 0.5;
+} /*mise en page du background pour qu'il soit fixe et bien placé avec une image  
+   on met une police d'ecriture qui sera utiliser sur tout le site et on met une couleur pour celle ci 
+*/
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    zoom: 1.2;
+}
+/*positionnement du header de ma page pour qu'il prenent toutes la longueur et soit toujours apparant 
+ aligne les images et texte et met un espace entre mes 2 grosse division parent avec un flex pour le responsive*/
+.dark-haut{
+    background-color: rgb(28, 28, 28);
+    transition: 3s;
+}
+/*change le header en noir*/
+.dark-back{
+    background-image: url("../image/ba2.jpg");
+    transition: 3s;
+}
+/*change l'image de fond par une image plus sombre*/
+
+.haut-droit{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+/*aligne les texte et image des division enfant de mon header et met un espace de 30 pixel entre eux */
+.haut-gauche-dark{
+    filter: invert();
+    transition: 3s ;
+}
+/*inverse la couleur de la parite en haut a gauche de mon header pour le darkmode*/
+
+.menu-text{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-left: 30px;
+}
+/*aligne le texte de mon menu en mettant un espace entre les bouton et le bord de la page */
+.traits{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transition: 3s;
+}
+/* pareil*/
+.dark-trait{
+    filter: invert();
+    transition: 3s;
+}/*inverse la couleur*/
+.compte {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #3e76dd;
+    border-radius: 12px;
+    width: 100px;
+    height: 60px;
+    justify-content: center;
+    margin-right: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+   
+
+}
+/*style du bouton en haut a droite lui donnant une largeur et hauteur fixe avec un fond bleu qui a les bords arrondie*/
+.darkmode{
+    display: flex;
+    align-items: center;
+} /*aligne la lune en haut a droite avec le bouton qui est a droite*/
+.darkmode :hover{
+   cursor: pointer;
+   transform: scale(1.2);
+   transition: 0.5s;
+}
+/*change le pointer de la souris en main et agrandie la lune  lorsque qu'on passe au dessus de celle ci  */
+
+
+
+p{
+    font-size: 25px;
+}
+/*taille de la police*/
+.compte a{
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.pp img{
+    width: 50px;
+    border-radius: 100%;
+}
+.menu-text a :hover{
+    transform: scale(1.1);
+}
+
+/*Change la couleur des lien dans la division "compte" et enleve le fait qu'ils soient souligner */
+
+.traits a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+transition: 3s;
+}
+/*pareil*/
+
+.Depliable a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+transition: 3s;
+}
+/*pareil*/
+h5{
+    color: #ffffff;
+}
+
+h1{
+    color: #6198fc;
+    font-size: 80px;
+    text-shadow: 1px 1px 7px #000000;
+    animation:left-right linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 50%;
+}
+h3{
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    text-shadow: 1px 1px 1em #3e76dd;
+}
+/*couleur de la police*/
+.slider{
+    margin-top: 100px;
+    display: flex;
+    width: 1710px;
+    height: 1100px;
+    overflow: hidden;
+    position: relative;
+    animation: left-right linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 5%;
+}/*met la largeur du slider a 1560 pixel pour pouvoir afficher 3 cartes et cache tout se qui depasse */
+
+.cartes{
+    display: flex;
+    transition: 1s;
+    justify-content: center;
+    gap: 30px;
+    
+}
+.scale{
+    transform: scale(1.5);
+    background: #00000004;
+    position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+}
+/*aligne tout les carte du slider avec un espace de 30 pixel entre elle */
+
+.cartes2{
+    display: flex;
+    transition: 1s;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}/*aligne les cartes pour ma 2eme page de façon a se quel reviennent a la ligne quand elles depassenr de l'ecran*/
+
+.cartes3{
+    display: flex;
+    transition: 1s;
+   justify-content: center;        
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    background: #00000087;
+    padding: 47px;
+    border-radius: 24px;
+    gap: 125px;
+    margin-top: 120px;
+    margin-left: 100px;
+    margin-right: 100px;
+    z-index: 100;
+
+}
+.tit{
+    margin-top: 180px;
+    text-align: center; 
+    
+}
+.msg-vide{
+    text-align: center; 
+    margin-top: 300px; 
+    margin-bottom: 500px; 
+    font-size: 60px; 
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cartes img{
+    width: 500px;
+    border-radius: 20px;
+    
+}
+/*Taille d'une carte et arrondie les coin*/
+
+.cartes2 img{
+    width: 200px;
+    border-radius: 20px;
+    
+}
+
+.cartes3 img{
+    width: 400px;
+    border-radius: 20px;
+}
+/*pareil*/
+
+
+
+.carte:hover{
+    cursor: url('../image/picka.png'), auto;
+    transform: scale(1.03);
+    opacity: 1;
+    transition: 1s;
+}
+
+.grass{
+    background: linear-gradient(135deg, #9bcc50, #57a639);
+    color: #ffffff;
+}
+.fire{
+    background: linear-gradient(135deg, #ff9444, #f25c00);
+    color: #ffffff; 
+}
+.water{
+    background: linear-gradient(135deg, #58abf6, #2c7edb);
+    color: #ffffff; 
+}
+.bug{
+    background: linear-gradient(135deg, #a8b820, #667700);
+    color: #ffffff;  
+}
+.poison{
+    background: linear-gradient(135deg, #a040a0, #602060);
+    color: #ffffff;  
+}
+.normal{
+    background: linear-gradient(135deg, #a8a878, #888866);
+    color: #ffffff;  
+}
+.ground{
+    background: linear-gradient(135deg, #e2bf65, #c0a03d);
+    color: #ffffff;  
+}
+.electric{
+    background: linear-gradient(135deg, #f8d030, #e6be00);
+    color: #ffffff;  
+}
+.fairy{
+    background: linear-gradient(135deg, #ee99ac, #cc6f8e);
+    color: #ffffff;   
+}
+.fighting{
+    background: linear-gradient(135deg, #c03028, #802020);
+    color: #ffffff; 
+}
+.psychic{
+    background: linear-gradient(135deg, #f85888, #d03070);
+    color: #ffffff;  
+}
+.rock{
+    background: linear-gradient(135deg, #b8a038, #8a7b2d);
+    color: #ffffff;  
+}
+.ghost{
+    background: linear-gradient(135deg, #705898, #3e3050);
+    color: #ffffff;  
+}
+.ice{
+    background: linear-gradient(135deg, #98d8d8, #58c3c3);
+    color: #ffffff;  
+}
+.dragon{
+    background: linear-gradient(135deg, #7038f8, #4828a1);
+    color: #ffffff;  
+}
+.dark{
+    background: linear-gradient(135deg, #5c483b, #281f13);
+    color: #ffffff;  
+}
+.steel{
+    background: linear-gradient(135deg, #b8b8d0, #8f8fa0);
+    color: #ffffff; 
+}
+.flying{
+    background: linear-gradient(135deg, #a890f0, #7060d0);
+    color: #ffffff; 
+}
+.vie {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 20px;
+}
+.blaze{
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 20px;
+}
+.abilities{
+    font-size: 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Type{
+    font-size: 30px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Detabilities{
+    font-size: 25px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Search{
+    color: rgb(0, 0, 0);
+}
+
+/*change la sourie en une image de pickachu quand on passe sur la carte */
+main{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*aligne les division de mon main  et met au centre mon main  */
+.filtre{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    background-color: rgb(255, 255, 255);
+    border-radius:12px ;
+    padding: 3px;
+    animation: reveal linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 50%;
+    margin-top: 200px;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.filtre input{
+border: 1px solid #3e76dd;
+padding: 5px;
+border-radius: 10px;
+}
+/*mise en page de la division parent de mon system de filtre  */
+.dark-filtre{
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+/*passe le system de filtre en noir */
+.dark-filtre > div :hover {
+    color: rgb(172, 172, 172);
+}
+/*change la couleur du text quand on passe au dessus quand le dark mode du filtre est activé*/
+.bouton{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+/*rend plus large les bouton */
+.bouton :hover{
+    color: black;
+    cursor: pointer;
+}
+/*change la couleur du texte des bouton du filtre lorsque on passe au dessus */
+.active-filtre{
+    background-color: #3e76dd;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+}
+/*met un fond bleu et met l'ecriture en blanc au filtre activé */
+
+.arrow:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    
+}
+/*agrandie les fleche du slider*/
+
+.arrow.left{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    left: -3%;
+    border-radius: 100%;
+    border:solid 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.2);
+    background-color: white;
+    animation: reveal2 linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 30%;
+}
+/*Mise en forme des fleche du slider avec un flex pour le responsive  */
+
+.arrow.right{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    left: 3%;
+    border-radius: 100%;
+    border:solid 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.2);
+    background-color: white;
+    animation: reveal2 linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 50%;
+}
+/*pareil */
+footer{
+    display: flex;
+    background-color: rgb(28, 28, 28);
+    justify-content: space-around;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 60px;
+  
+}
+/*met un fond noir au footer du site et le met tout en bas de la page */
+footer p{
+    color: grey;
+}
+/*couleur du texte du footer*/
+
+ 
+    .inscription{
+    background-color: #252525;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    color: white
+    
+    }
+    /*mise en page du formulaire */
+    *{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    }
+    form > div {
+    margin: 30px 20px;
+    }
+    label {
+    display: block;
+    margin-bottom: 8px;
+    color: #3e76dd;
+    
+    }
+    
+    input {
+    color: white;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border: solid 0px;
+    text-align: left;
+    }
+    input:focus{
+        outline: none;
+    }
+
+    .input-form{
+        display: flex;
+        border-width: 0px;
+        border: solid 1px #5ab5ff;
+        padding: 20px;
+        border-radius: 19px;
+        gap: 10px;
+    }
+
+    .input-form img{
+        width: 70px;
+    }
+    
+   
+    .formulaire{
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        left: 25%;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        text-align: center;
+        zoom: 0.9;
+}
+.formulaire h1{
+    color: #669fed;
+    font-size: 80px;
+    text-shadow: 1px 1px 40px #04a8ff;
+}
+/*met la division parent du formulaire au au centre */
+form img{
+    width: 50%;
+}
+input[type="file" i] {
+    width: 48%;
+}
+.formulaire_droite{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.haut-formulaire{
+    display: flex;
+    flex-direction: row;
+        justify-content: center;
+}
+
+.error{
+    border-bottom: 2px solid red;
+    color: red;
+}
+/*met les contour des zones de saisie en rouge lorsqu'il y a une erreur*/
+.succes{
+    border-bottom: 2px solid rgb(0, 255, 30);
+    color: rgb(0, 255, 30);
+}/*pareil mais quand tout va bien */
+
+.message-error ul{
+    margin-left: 30px;
+
+    color: #dd3e3e;
+    border-radius: 20px;    
+}
+/*message d'erreur rouge avec fon rouge*/
+
+.message-succes ul{
+    margin-left: 30px;
+    color: #36ff04;
+    border-radius: 20px;
+}/*pareil mais en vert*/
+
+.inscription-boutton{
+    border-radius: 11px;
+    font-size: 43px;
+    background-color: #4378ce;
+    color: white;
+    padding: 20px;
+}
+.bouton_GOOGLE{
+    background-color: rgb(255, 255, 255) ;
+    color: #000000;
+    border: solid 1px #4378ce;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.bouton_GOOGLE a{
+    color: #000000;
+   text-decoration: none;
+}
+.bouton_GOOGLE img{
+   width: 50px;
+}
+
+
+
+
+.Depliable{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display:flex;
+    margin-top: 60px;
+    padding: 20px;
+    border-radius: 0px 0px 16px 0px;
+    z-index: 1;
+    gap: 70px;
+    height: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none; /*desactive les interactions*/
+}
+/*mise en forme de la sidenav en la placant en haut a gauche 
+avec une opaciter de 0 et un positionnement de -80 pixel(sur l'axe X) pour la faire glisser et apparaitre verx la droite */
+
+
+.carte-invisible{
+    opacity: 0;
+    transform: translateX(-80px);
+    pointer-events: none;
+}
+.menu-visible {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: all;
+}
+/*Fait glisser mon slider a droite et remet les interactions */
+
+.dark-side-bar{
+    background: black;
+    transition: 1s;
+    color: white;
+    
+}
+/*met la barre en noir lors du glissement */
+.dark-side-bar a{
+   
+    color: white;
+    
+}
+/*couleur des lien de celle ci*/
+
+.echange-bouton{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3e76dd;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 20px;
+}
+/*Pareil que pour le bouton connexion */
+.echange-body{
+    display: none;
+   position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;/*permet de mettre la page au dessus */
+}
+/*creation de la page echange de façon a se qu'elle prenne tout 'l'ecran avec un fond noir transparent */
+.contenu-echange{
+    background-image: url("../image/poke-fond-centre.png");
+    color: white;
+    background-size: cover;
+    width: 50%;
+    height: 50%;
+    padding: 20px;
+    margin: 10% auto;
+    border-radius: 10px;
+    position: relative;
+}
+/* taille et background du contenu de ma page echange*/ 
+.croix{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.croix2{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 60px;
+    cursor: pointer;
+    color: white;
+}
+/*placement de ma croix pour quiter la page*/
+.page-echange{
+display: flex;
+flex-direction: column;
+}
+/*met en colonne les division de ma page*/
+.page-echange label{
+    margin-top: 100px;
+    }
+
+
+.images-map{
+    width: 100%;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}/* division prenant l'integriter de mon formulaire */
+
+
+.images-map::before{
+    background: conic-gradient(from var(--angle), #3e76dd,#3e76dd,  transparent,transparent, #3e76dd,#3e76dd, transparent,transparent,#3e76dd,#3e76dd);
+    content: '';
+    position: absolute;
+    top: 1;
+    left: 1;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    animation: 8s rotate-back linear infinite; /*fait la keyframe "rotate-back"  pendant 8sec a l'infinie*/
+    z-index: -1;/*place celui ci derriere le formulaire */
+    filter: blur(3px);/*effet de flou*/
+    border-radius: 24px;
+}
+
+/*creation d'un fond avec des zones transparent qui tourne pour faire une animation
+--angle est une variable  qui va changer a l'aide d'une Keyframe et qui va donc changer la rotation du gradient*/
+
+.non-favoris img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    width: 80px;
+    opacity: 0;
+   transition: 1s;
+}/*place le coeur vide en bas a gauche de ma carte en invisible */
+
+.non-favoris{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.sup{
+    cursor: pointer;
+     background: none;
+      border: none; 
+      color: rgb(255, 62, 62); 
+      font-size: 20px;
+}
+
+
+.carte{
+position: relative;
+width: 20%;
+padding: 30px;
+padding-top: 60px;
+padding-bottom: 60px;
+border-radius: 20px;
+flex-direction: column;
+gap: 40px;
+border: solid 10px rgb(238 202 28);
+box-shadow: inset 0px 0px 20px 20px #ffffff5c;
+
+}
+
+.carte2{
+    position: relative;
+    width: 470px;
+    padding: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-radius: 20px;
+    flex-direction: column;
+    gap: 40px;
+    border: solid 10px rgb(238 202 28);
+    box-shadow: inset 0px 0px 20px 20px #ffffff5c;
+    
+    }
+    
+
+.PokeGif{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(232, 232, 232, 0.516);
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 80px;
+  border-radius: 24px;
+}
+
+/*permet l'utilisation du ablsolute precedent (sinon sa marche pas)*/
+.carte:hover .non-favoris img{
+    opacity: 1;
+   transition: 0.2;
+}
+/*rend visible le coeur vide lorsque on passe sur la carte*/ 
+.non-favoris img.opaciterMax{
+    opacity: 1;
+}
+/*sert a rendre visible definitivement le coeur */
+
+.apear{
+    display: block;
+}
+/*sert a faire apparaitre le coeur*/
+
+.landing{
+display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 300px;
+    color: #ffffff;
+    text-shadow: 1px 6px 23px #000000;
+    background-color: rgb(0 0 0 / 25%);
+    animation: reveal linear 1s;
+    
+}
+
+.landing2{
+    display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 180px;
+        color: #ffffff;
+        text-shadow: 1px 6px 23px #000000;
+        background-color: rgb(0 0 0 / 25%);
+        
+    }
+
+    .landing2 img{
+       width: 50%;
+       animation: reveal linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 50%;
+        }
+    
+.landing img{
+    width: 40%;
+    border-radius: 0px 146px 146px 0px  ;
+    animation: reveal linear 1s;
+
+}
+.landing a{
+     color: #f30707;
+    }
+
+.titre{
+    width: 50%;
+    margin-left: 40px;
+    animation: left-right linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 50%;
+}
+
+.page-booster{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: 120px;
+}
+
+.booster{
+    background-color: #ffffff;
+    border-radius: 24px;
+    width: 55%;
+    margin-bottom: 10%;
+    margin-left: 60px;
+}
+
+
+.collection-image img{
+    border-radius: 24px 24px 0px 0px;
+    width: 100%;
+}
+
+.bouton-ouverture-booster{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #5483ff;
+        width: 80%;
+        border-radius: 24px;
+        color: white;
+        margin-top: 52px;
+        margin-left: 10%;
+        margin-bottom: 32px;
+        gap: 20px;
+
+}
+.bouton-ouverture-booster img{
+   width: 100px !important;
+
+}
+
+
+
+.titre-booster{
+    margin-left: 20px;
+}
+
+.description-booster{
+    margin-left: 20px;
+}
+
+.ouverture-booster:hover{
+     transform: scale(1.1);
+cursor: pointer;
+}
+
+.dark-filtre{
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+
+.logo-site img{
+width: 300px;
+}
+.logo-site-form img{
+    width: 600px;
+    }
+    .logo-site-form{
+        display: flex;
+        justify-content: center;
+        }
+
+.input-echange 
+{
+        border-radius: 7px;
+    border: solid 5px #3e76dd;
+    color: #3e76dd;
+}
+
+.pickachu-page{
+    position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.5);
+     z-index: 10;/*permet de mettre la page au dessus */
+}
+
+.content-pickachu-page{
+    color: white;
+    background-size: cover;
+    width: 50%;
+    height: 50%;
+    padding: 20px;
+    margin: 10% auto;
+    border-radius: 10px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    gap: 30px;
+}
+.image-carte img{
+border-radius: 24px;
+}
+
+.croix2{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.popup-content {
+    display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 90%;
+  height: 50%;
+  position: relative;
+}
+
+
+
+.disapear{ 
+    display: none;
+}
+/*class permettant de faire disparaitre des elements*/
+
+@keyframes rotate-back{
+    0% {
+       --angle:0deg; 
+    }
+
+    100% {
+        --angle:360deg;
+    }
+    /*keyframe changeant l'angle du gradiant derriere le formulaire */
+}
+
+@keyframes reveal{
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes left-right{
+    from{
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    to{
+        transform:translateX(0) ;
+        opacity: 1;
+    }
+}
+
+@keyframes reveal2{
+    from{
+        
+        opacity: 0;
+    }
+
+    to{
+        
+        opacity: 1;
+    }
+}
+
+@keyframes reveal-haut{
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@property --angle{
+    initial-value: 0deg; /*donne la valeur initial de la variable angle*/
+    syntax:"<angle>"; /* type de la variable*/
+    inherits: false; /* Permet que la variable soit utiliser une seul fois et que les sous division n'herite pas de celle ci ,*/
+}
+
+@media screen and (max-width: 900px){
+    .landing img{
+        width: 48%;
+      
+    
+    }
+    }
+
+
+@media screen and (max-width: 800px){
+
+    .menu-text{
+    display: none;
+    padding-left: 30px;/*fait disparaitre le menu en haut a gauche */
+}
+
+footer{
+    flex-direction: column;
+}/*met les elements du footer en collonne pour la version mobile et tablette*/
+.nous{
+margin-left:  20px; 
+}
+.link{
+    margin-left:20px; 
+    }
+.Follow{ 
+    margin-left:20px;
+}
+.tra{
+display:flex;
+z-index: 100;
+}/*fait apparaite le bouton permettant d'afficher la sidebar*/
+
+.compte {
+   
+    height: 54px;
+}
+/*reduit la hauteur du bouton connexion */
+
+.cartes2 img{
+    width: 100px;
+}/*reduit la taille des cartes de ma deuxieme page*/
+
+.cartes3 img{
+    width: 300px;
+}
+.non-favoris img{
+    width: 40px;
+    padding: 10px; 
+}
+.carte{
+    zoom: 0.6;
+}
+
+.filtre{
+    zoom: 0.6;
+}
+}
+
+
+
+@media screen and (max-width: 700px){
+    h1{
+        font-size: 30px;
+    }
+    h2{
+    font-size: 20px;
+    }
+    
+    .landing a{
+        font-size: 20px;
+    }
+    
+
+    .landing2 img{
+        width: 50%;
+        position: relative;
+        bottom: 0;
+        right: 0;
+         }
+
+         
+     
+ .landing img{
+     width: 50%;
+     border-radius: 0px 85px 85px 0px  ;
+ 
+ }
+ .landing2{
+    position: relative;
+    bottom: 0;
+    right: 0;
+    left: 0;
+     }
+
+.filtre{
+   zoom: 0.5;
+}
+
+
+}
+
+
+@media screen and (max-width: 500px)
+{
+    .carte{
+       font-size: 20px;
+        padding: 50px;
+    }
+    .cartes2 img{
+        width: 70px;
+        
+    }
+    .cartes3 img{
+        width: 150px;
+        
+    }
+    
+    .haut-droit{
+        zoom: 0.8;
+    }
+
+    .non-favoris img{
+        width: 20px; 
+        padding: 10px;
+    }
+    /*reduit la taille des cartes de ma deuxiem page* pour la version mobile */
+    .logo-site img{
+        width: 150px;
+        }
+    .filtre{
+         zoom: 0.4;
+     }
+}
+
+@media screen and (min-width: 800px){
+.footer{
+    display: flex;
+    flex-direction:row;
+}
+
+.tra{
+    display: none;
+    }/*fait disparaite le bouton permettant d'afficher la sidebar*/ 
+}
+@media screen and (min-width: 1440px){
+     main{
+    margin-top: 10%;
+    } 
+    }
+
+@media screen and (max-width: 1440px){
+    body{
+        zoom: 0.5;
+    }
+    /*change le zoom de base du site (pour passer de la 4k a la 2K*/
+
+    }
+
+    
+/*Slider et booster querry media */
+
+
+@media screen and (max-width: 769px){
+        
+    
+    .main1{
+        zoom: 0.85;
+    }
+    .booster{
+        zoom: 0.9;
+    }
+    .formulaire{
+        zoom: 0.8;
+    }
+
+}
+    
+    @media screen and (max-width: 569px){
+        
+        .filtre
+        {
+            zoom: 0.4;
+        }
+        .main1{
+            zoom: 0.55;
+        
+        }
+    
+    .booster{
+        zoom: 0.7;
+    }
+    .formulaire{
+        zoom: 0.6;
+    }
+    footer h5{
+        font-size: 25px;
+    }
+    footer p{
+        font-size: 15px;
+    }
+    }
+
+@media screen and (max-width: 426px){
+        
+    .filtre
+    {
+        zoom: 0.4;
+        margin-top: 250px;
+    }
+    .main1{
+        zoom: 0.45;
+
+    }
+    .booster{
+        zoom: 0.5;
+    }
+    .carte{
+        zoom: 0.5;
+    }
+    .cartes3{
+        zoom: 0.7;
+
+    }
+
+}
+
+
+
+    @media screen and (max-width: 376px){
+        .landing img{
+            border-radius: 0px 60px 60px 0px;
+        }
+    .filtre
+    {
+        zoom: 0.4;
+    }
+    .main1{
+        zoom: 0.4;
+    }
+    .cartes3{
+        zoom: 0.6;
+    }
+}
+
+   
+
+
+    @media screen and (max-width: 320px){
+        .landing img{
+            border-radius: 0px 60px 60px 0px;
+        }
+    .filtre
+    {
+        zoom: 0.4;
+    }
+    .main1{
+        zoom: 0.35;
+    }}
+
+  
+

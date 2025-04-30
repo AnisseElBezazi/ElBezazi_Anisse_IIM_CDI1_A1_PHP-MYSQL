@@ -1,0 +1,26 @@
+# Dossiers qu'on ne veut pas versionner
+/vendor/
+node_modules/
+uploads/
+.idea/
+.vscode/
+.env
+
+# Fichiers temporaires ou inutiles
+*.log
+*.tmp
+*.bak
+*.zip
+*.tar.gz
+.DS_Store
+Thumbs.db
+
+# Cache Laravel / PHP
+bootstrap/cache/
+storage/*.key
+storage/logs/
+storage/framework/
+
+# Cache VS Code / OS
+*.swp
+*.swo

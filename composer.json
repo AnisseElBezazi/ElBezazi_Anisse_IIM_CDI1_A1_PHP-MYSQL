@@ -1,0 +1,11 @@
+{
+    "name": "anisse/pokemonr",
+    "autoload": {
+        "psr-4": {
+            "Anisse\\Pokemonr\\": "src/"
+        }
+    },
+    "require": {
+        "google/apiclient": "^2.18"
+    }
+}
