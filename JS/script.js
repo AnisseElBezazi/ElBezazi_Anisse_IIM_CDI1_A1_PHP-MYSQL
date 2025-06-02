@@ -82,7 +82,6 @@ async function CartesPokemon() {
             <div class="Detabilities">${effect1}</div>
             <div class="abilities"><strong>${capa2}</strong></div>
             <div class="Detabilities">${effect2}</div>
-            <div class="non-favoris"><img src="image/coeur-vide.png" alt="coeur-vide"></div>
             </div>
         `;
 
@@ -90,21 +89,7 @@ async function CartesPokemon() {
 
 const cartes=document.querySelectorAll('.carte');
 
-cartes.forEach(carte => {
-  const nonFavoris = carte.querySelector('.non-favoris img'); /*Pour chaque carte on selectionne l'image de la class non-favoris */
 
-  nonFavoris.addEventListener('click', function(e) { /*Lorsqu'on click sur un coeur  */
-    e.stopPropagation();
-      if (nonFavoris.getAttribute('src') === 'image/coeur-vide.png') {/*Si le src de ma class nonFavoris est l'image de coeur vide */
-          nonFavoris.setAttribute('src', 'image/coeur-plein.png'); /*Alors je modifie le src de ma class par une image de coeur plein   */
-          nonFavoris.classList.add('opaciterMax'); /*et je met l'opacité au max pour que celui ci ne soit pas affecter par le hover */
-      } else {
-          nonFavoris.setAttribute('src', 'image/coeur-vide.png');  /*sinon je remplace le src par une image de coeur vide */
-          nonFavoris.classList.remove('opaciterMax');/*j'enleve l'opacité au max par default pour que le coeur vide apparait seulement quand on passe au dessus d'une carte */
-      }
-  });
-  
-});
 
 
 }
@@ -138,6 +123,7 @@ document.addEventListener("click", function (e) {
 });
 
 
+//recherche
 
 const searchInput = document.getElementById('searchBar');
 

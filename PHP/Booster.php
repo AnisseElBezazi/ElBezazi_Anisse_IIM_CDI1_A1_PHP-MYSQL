@@ -14,16 +14,16 @@ require_once("Top-page.php");
 <div class="page-booster">
     <div class="booster">
         <div class="collection-image">
-        <img src="../image/ecarlate-et-violet.jpg" alt="">
+        <img src="../image/damxfcm.png" alt="">
         
         
     </div>
-        <div class="titre-booster"><h4>Écarlate & Violet</h4></div>
-        <div class="description-booster">La dernière extension Pokémon sortie à ce jour.</div>
+        <div class="titre-booster"><h4>Pack Suprême</h4></div>
+        <div class="description-booster">Tous les Pokémon sont dans ce booster !
+Le pack parfait pour les fans</div>
         <div class="ouverture-booster"> 
-            <!-- Bouton qui va me rediriger vers la page qui a le code pour generer des cartes aleatoire -->
     <form action="ouvrir-pack.php" method="POST">
-        <button type="submit" style="width: 100%; border: none; background: none;">
+        <button type="submit"  class="booster-bouton">
             <div class="bouton-ouverture-booster">
                 <img src="../image/logo-pokemon-blanc.png" alt="" width="50px">
                 <h4>Ouvrir le booster</h4>

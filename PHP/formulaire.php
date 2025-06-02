@@ -49,30 +49,30 @@ require 'vendor/autoload.php';
 $client = new Google_Client();// crée un objet avec la class Google_Client
 $client->setClientId('81770474473-n3jsva7qhgdoblhoudmsjvi4v2ati7kj.apps.googleusercontent.com'); //Id donner sur le site de google
 $client->setClientSecret('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');// code secret donner sur le site de google 
-$client->setRedirectUri('http://localhost/Site-web-pokemon--main/Site-pokemon--page-2-et-filtre-/ElBezazi_Anisse_CDI1A1_IIM/callback2.php'); //redirige la personne vers la page callback
+$client->setRedirectUri('http://localhost/SITE-web-pokemon--main/Site-pokemon--page-2-et-filtre-/ElBezazi_Anisse_CDI1A1_IIM/ElBezazi_Anisse_IIM_CDI1_A1_PHP-MYSQL/PHP/Callback2.php'); //redirige la personne vers la page callback
 $client->addScope('email');//demande a google l'accés au mail 
 $client->addScope('profile');//demande a google l'accés au profil cad pseudo et pp
 
-$authUrl = $client->createAuthUrl(); //crée un url qui mennent vers google avec tout les 
+$authUrl = $client->createAuthUrl(); //crée un url qui mennent vers google avec tout les compte
 
 
 
 require_once("PDOconnexion.php");
 
-if($_POST){
+if($_POST){//si j'ai un post
+
 try{
-
-
-    $email = $_POST["email"];
+//j'essaye d'executer le code 
+    $email = $_POST["email"];//stock les données entrer dans le  formulaire dans une variable
     $password = $_POST["password"];
     $pseudo =$_POST["pseudo"];
 
     $sql = "INSERT INTO user (email, password,pseudo) VALUES(:email, :password, :pseudo)";
 
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
+    $stmt = $pdo->prepare($sql);//prepare la requete 
+    $stmt->execute([//executre la requete sql en inserant données du formulaire dans la bdd 
         'email' => $email,
-        'password' => password_hash($password, PASSWORD_DEFAULT),
+        'password' => password_hash($password, PASSWORD_DEFAULT),//hash le mots pass pour le securiser (irreversible)
         'pseudo' => $pseudo,
     ]);
 
@@ -87,8 +87,7 @@ catch(Exception $e){
 
 <div class = bouton_GOOGLE>
     <img src="../image/google-37.png" alt="logo google">
-<a href="<?= htmlspecialchars($authUrl) ?>">Se connecter avec Google</a><!--html qui permet de rediriger vers l'url crée avant  -->
-<!-- htmlspecialchars sert a transfomer les caractere speciaux -->
+<a href="<?= htmlspecialchars($authUrl) ?>">Se connecter avec Google</a>
 </div>
 </div>
 <a href="connexion.php"><p id="connexion">vous avez déja un compte ?</p></a>

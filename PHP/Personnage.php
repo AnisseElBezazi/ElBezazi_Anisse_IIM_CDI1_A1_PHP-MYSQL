@@ -7,6 +7,7 @@ if (!isset($_SESSION['user'])) {
 }
 
 $user = $_SESSION['user'];
+require_once("PDOconnexion.php");
 require_once("Top-page.php");
 ?>
 

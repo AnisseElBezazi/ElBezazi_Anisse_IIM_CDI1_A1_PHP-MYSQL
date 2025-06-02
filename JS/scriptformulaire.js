@@ -42,7 +42,7 @@ form.addEventListener("submit",function(event){
         variablePassword.classList.add("succes");
     }
 
-    if (variablePassword.value.trim() !== variablePassword2.value.trim()){  /*verifie si le mots de passeest identique */
+    if (variablePassword.value.trim() !== variablePassword2.value.trim()){  /*verifie si le mots de passe est identique */
         variablePassword2.classList.remove("succes");
         variablePassword2.classList.add("error");
         ListeErreur.innerHTML += "<li>Le mots de passe n'est pas identique<br></li>";

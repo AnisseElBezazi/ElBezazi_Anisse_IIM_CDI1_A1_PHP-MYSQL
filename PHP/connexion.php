@@ -1,39 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire Pokemon</title>
-    <link rel="stylesheet" href="../CSS/style.css"/>
-    <script src="../JS/scriptformulaire.js" defer></script>
-</head>
-<body>
-        <div class="formulaire">
-            
-<form class="inscription" method="POST" enctype="multipart/form-data">
-    <div class="images-map">
 
-    <div class="formulaire_droite">
-        <div class="Enregistrement"><h1>Connexion</h1></div>
-
-<div class="input-form">
-
-<img src="../image/Mail.gif"><input type="email" name="email" id="email"placeholder="Email">
-</div>
-    
-<div class="input-form">
-
-<img src="../image/arrow.gif"><input type="password" name="password" id="password" placeholder="Mot de passe">
-</div>
-<div class = message>
-<div class="message-error">
-    <ul></ul>
-</div>
-<div class="message-succes">
-    <ul></ul>
-</div>
-</div>
-<div class="lien-connxion">
 <?php 
 
 require 'vendor/autoload.php';
@@ -79,6 +44,43 @@ if ($_POST) {
 }
 
 ?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Pokemon</title>
+    <link rel="stylesheet" href="../CSS/style.css"/>
+    <script src="../JS/scriptformulaire.js" defer></script>
+</head>
+<body>
+        <div class="formulaire">
+            
+<form class="inscription" method="POST" enctype="multipart/form-data">
+    <div class="images-map">
+
+    <div class="formulaire_droite">
+        <div class="Enregistrement"><h1>Connexion</h1></div>
+
+<div class="input-form">
+
+<img src="../image/Mail.gif"><input type="email" name="email" id="email"placeholder="Email">
+</div>
+    
+<div class="input-form">
+
+<img src="../image/arrow.gif"><input type="password" name="password" id="password" placeholder="Mot de passe">
+</div>
+<div class = message>
+<div class="message-error">
+    <ul></ul>
+</div>
+<div class="message-succes">
+    <ul></ul>
+</div>
+</div>
+<div class="lien-connxion">
 
 <div class = bouton_GOOGLE>
     <img src="../image/google-37.png" alt="logo google">

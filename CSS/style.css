@@ -1,5 +1,5 @@
 body{
-    background-image: url("../image/Gif1.gif");
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)),url("../image/Gif1.gif");
     background-color: #D9D9D9;
     background-size: cover;
     background-position: center;
@@ -13,6 +13,7 @@ body{
 } /*mise en page du background pour qu'il soit fixe et bien placé avec une image  
    on met une police d'ecriture qui sera utiliser sur tout le site et on met une couleur pour celle ci 
 */
+
 
 
 header{
@@ -139,13 +140,9 @@ h5{
 }
 
 h1{
-    color: #6198fc;
+    color: #3079ff;
     font-size: 80px;
     text-shadow: 1px 1px 7px #000000;
-    animation:left-right linear;
-    animation-timeline: view();
-    animation-range-start: cover 0% ;
-    animation-range-end: contain 50%;
 }
 h3{
     color: rgb(255, 255, 255);
@@ -154,16 +151,17 @@ h3{
 }
 /*couleur de la police*/
 .slider{
-    margin-top: 100px;
+   
     display: flex;
     width: 1710px;
     height: 1100px;
     overflow: hidden;
     position: relative;
-    animation: left-right linear;
+     animation: reveal2 linear;
     animation-timeline: view();
     animation-range-start: cover 0% ;
-    animation-range-end: contain 5%;
+    animation-range-end: contain 20%;
+    
 }/*met la largeur du slider a 1560 pixel pour pouvoir afficher 3 cartes et cache tout se qui depasse */
 
 .cartes{
@@ -211,11 +209,7 @@ h3{
     z-index: 100;
 
 }
-.tit{
-    margin-top: 180px;
-    text-align: center; 
-    
-}
+
 .msg-vide{
     text-align: center; 
     margin-top: 300px; 
@@ -368,6 +362,8 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 30px;
+    zoom:0.8;
 }
 /*aligne les division de mon main  et met au centre mon main  */
 .filtre{
@@ -431,7 +427,6 @@ border-radius: 10px;
 /*agrandie les fleche du slider*/
 
 .arrow.left{
-    position: relative;
     width: 80px;
     height: 80px;
     left: -3%;
@@ -446,11 +441,12 @@ border-radius: 10px;
     animation-timeline: view();
     animation-range-start: cover 0% ;
     animation-range-end: contain 30%;
+    margin-right: 30px;
 }
 /*Mise en forme des fleche du slider avec un flex pour le responsive  */
 
 .arrow.right{
-    position: relative;
+    
     width: 80px;
     height: 80px;
     left: 3%;
@@ -465,6 +461,7 @@ border-radius: 10px;
     animation-timeline: view();
     animation-range-start: cover 0% ;
     animation-range-end: contain 50%;
+    margin-left: 30px;
 }
 /*pareil */
 footer{
@@ -548,6 +545,9 @@ footer p{
     color: #669fed;
     font-size: 80px;
     text-shadow: 1px 1px 40px #04a8ff;
+}
+.formulaire a {
+    color: white;
 }
 /*met la division parent du formulaire au au centre */
 form img{
@@ -736,6 +736,8 @@ flex-direction: column;
 /*met en colonne les division de ma page*/
 .page-echange label{
     margin-top: 100px;
+    font-size: 51px;
+    text-shadow: 0px 0px 23px #0015ff;
     }
 
 
@@ -783,16 +785,28 @@ flex-direction: column;
 }
 .sup{
     cursor: pointer;
-     background: none;
-      border: none; 
-      color: rgb(255, 62, 62); 
-      font-size: 20px;
+    background: none;
+    border: none;
+    color: rgb(5 4 4);
+    font-size: 20px;
+    margin-left: 26%;
+    text-align: center;
+    
+    padding: 19px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 13px;
+}
+.sup img{
+    width: 50px !important; 
+    
 }
 
 
 .carte{
 position: relative;
-width: 20%;
+width: 460px;
 padding: 30px;
 padding-top: 60px;
 padding-bottom: 60px;
@@ -851,50 +865,162 @@ box-shadow: inset 0px 0px 20px 20px #ffffff5c;
 display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 300px;
     color: #ffffff;
     text-shadow: 1px 6px 23px #000000;
-    background-color: rgb(0 0 0 / 25%);
     animation: reveal linear 1s;
+margin-top: 180px;
+margin-bottom: 100px;
+}
+
+.landing h1{
+    text-align: left;
+    font-size: 80px;
+    animation: reveal2 linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 20%;
     
+}
+.landing h2{
+    text-align: left;
+    font-size: 60px;
+    animation: reveal2 linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 30%;
 }
 
 .landing2{
     display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 180px;
         color: #ffffff;
         text-shadow: 1px 6px 23px #000000;
-        background-color: rgb(0 0 0 / 25%);
+       margin-top: 85px;
         
     }
-
-    .landing2 img{
-       width: 50%;
-       animation: reveal linear;
+    .landing2 h1{
+        font-size: 92px;
+         animation: reveal2 linear;
     animation-timeline: view();
     animation-range-start: cover 0% ;
-    animation-range-end: contain 50%;
-        }
+    animation-range-end: contain 20%;
+
+    }
+    .landing2 h2{
+        text-align: center;
+        font-size: 56px;
+         animation: reveal2 linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 30%;
+       
+    }
+
+    
     
 .landing img{
     width: 40%;
     border-radius: 0px 146px 146px 0px  ;
-    animation: reveal linear 1s;
-
+     animation: reveal2 linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 20%;
 }
 .landing a{
      color: #f30707;
+     font-size: 60px;
     }
+
+.landing-top{
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)),url(../image/pokemon-pokemon-first-generation-wallpaper-preview.jpg);
+    z-index: 1;
+    width: 100%;
+    height: 1650px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 101px;
+    background-size: cover;
+    box-shadow: 0px 20px 20px 0px;
+    background-position: center;
+}
+
+.landing-top h1{
+    font-size: 139px;
+    text-align: center;
+    text-shadow: 1px 1px 49px #3079ff;
+    color: blue;
+
+}
+
+.landing-top h2{
+    color: white;
+    font-size: 66px;
+    text-align: center;
+    text-shadow: 1px 1px 20px rgb(241 241 241 / 53%);
+}
+.boutonl{
+    color: white;
+    background: black;
+    padding: 35px;
+    font-size: 80px;
+    border-radius: 26px;
+    box-shadow: 1px 1px 20px 10px
+}
+.boutonl a{
+    font-size: 80px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.boutonl2 a{
+    font-size: 57px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.boutonl:hover{
+background-color: rgb(192, 0, 0);
+transform: scale(1.05);
+transition: 0.5s;
+cursor: pointer;
+}
+.boutonl2{
+        background-color: black;
+    font-size: 57px;
+    padding: 34px;
+    border-radius: 26px;
+        box-shadow: 1px 1px 20px 10px;
+         animation: reveal linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 20%;   
+}
+
+.boutonl2:hover{
+background-color: rgb(192, 0, 0);
+transform: scale(1.05);
+transition: 0.5s;
+cursor: pointer;
+}
 
 .titre{
     width: 50%;
     margin-left: 40px;
-    animation: left-right linear;
-    animation-timeline: view();
-    animation-range-start: cover 0% ;
-    animation-range-end: contain 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.booster-bouton{
+width: 100%; 
+border: none; 
+background: none;
 }
 
 .page-booster{
@@ -1043,6 +1169,105 @@ border-radius: 24px;
 .disapear{ 
     display: none;
 }
+
+.white-tabs{
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 80px;
+   
+    margin-top: 180px;
+}
+
+.white-tab {
+    background-color: rgba(0, 0, 0, 0.88);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 130px;
+    border-radius: 24px;
+    width: 15%;
+    padding: 46px 100px;
+    box-shadow: 0px 4px 20px 8px;
+    margin-top: 90px;
+    height: 900px;
+ animation: reveal2 linear;
+    animation-timeline: view();
+    animation-range-start: cover 0% ;
+    animation-range-end: contain 30%;
+}
+
+.reveal {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.white-tab img{
+  width: 50%;
+  height: 180px;
+}
+
+
+.white-tab h1{
+        text-align: center;
+    font-size: 50px;
+    animation: none;
+   
+}
+
+.white-tab h2{
+        text-align: center;
+        font-size: 45px;
+        color: white;
+
+}
+
+.tit{
+    margin-top: 180px;
+    text-align: center; 
+   
+}
+
+.tit h1{
+     color: #ffffff;
+    text-shadow: 0px 0px 33px #0f47ff;
+}
+.coSearch{
+    background-color: white;
+    width: auto;
+    border: 5px solid #3e76dd;
+    border-radius: 23px;
+    display: flex;
+    justify-content: center;
+    font-size: 61px;
+    margin-bottom: 10px;
+}
+.ech{
+        background: #4882ec;
+    margin-top: 112px;
+    width: 100%;
+    height: 151px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 76px;
+    border-radius: 24px;
+    color: white;
+}
+select{
+        border: none;
+    font-size: 59px;
+    border-radius: 20px;
+}
 /*class permettant de faire disparaitre des elements*/
 
 @keyframes rotate-back{
@@ -1081,25 +1306,25 @@ border-radius: 24px;
 
 @keyframes reveal2{
     from{
-        
+        transform: translateY(200px);
         opacity: 0;
     }
 
     to{
-        
+        transform: translateY(0px);
         opacity: 1;
     }
 }
 
 @keyframes reveal-haut{
     from{
-        transform: scale(0);
-        opacity: 0;
+        transform: translateY(0px);
+        opacity: 1;
     }
 
     to{
-        transform: scale(1);
-        opacity: 1;
+       transform: translateY(-500px);
+        opacity: 0;
     }
 }
 @property --angle{
@@ -1122,8 +1347,11 @@ border-radius: 24px;
     .menu-text{
     display: none;
     padding-left: 30px;/*fait disparaitre le menu en haut a gauche */
+    
 }
-
+.coSearch{
+    font-size: 35px;
+}
 footer{
     flex-direction: column;
 }/*met les elements du footer en collonne pour la version mobile et tablette*/
@@ -1249,15 +1477,12 @@ z-index: 100;
     flex-direction:row;
 }
 
+
 .tra{
     display: none;
     }/*fait disparaite le bouton permettant d'afficher la sidebar*/ 
 }
-@media screen and (min-width: 1440px){
-     main{
-    margin-top: 10%;
-    } 
-    }
+
 
 @media screen and (max-width: 1440px){
     body{
@@ -1267,11 +1492,19 @@ z-index: 100;
 
     }
 
+    @media screen and (max-width: 1440px){
+    main{
+        zoom: 0.6;
+    }
+    /*change le zoom de base du site (pour passer de la 4k a la 2K*/
+
+    }
+
     
 /*Slider et booster querry media */
 
 
-@media screen and (max-width: 769px){
+@media screen and (max-width: 800px){
         
     
     .main1{
@@ -1284,6 +1517,63 @@ z-index: 100;
         zoom: 0.8;
     }
 
+    .slider{
+    width: 1040px;
+    height: 790px;
+}
+.landing2{
+    flex-direction: column-reverse;
+}
+.landing-top h1{
+    font-size: 81px;
+}
+
+.landing-top h2{
+    font-size: 42px;
+}
+.boutonl a{
+    font-size: 50px;
+}
+.titre{
+    width: 90%;
+    margin-top: 90px;
+    margin-top: 90px;
+}
+.landing2 h2{
+    font-size: 40px;
+}
+.landing2 h1{
+    font-size: 66px;
+}
+.white-tabs{
+    zoom: 0.6;
+}
+.landing img {
+        width: 63%;
+        border-radius: 30px;
+    }
+    .landing{
+        flex-direction: column;
+    }
+    .landing h1{
+        font-size: 66px;
+    }
+       .landing h2{
+        font-size: 40px;
+    }
+    .landing a {
+        font-size: 40px;
+    }
+
+    .carte img {
+        width: 100px;
+    }
+    .PokeGif img {
+        width: 301px;
+    }
+    
+     
+
 }
     
     @media screen and (max-width: 569px){
@@ -1291,10 +1581,14 @@ z-index: 100;
         .filtre
         {
             zoom: 0.4;
+            margin-top: 200px ;
         }
         .main1{
             zoom: 0.55;
         
+        }
+        .cartes2{
+            zoom: 0.5;
         }
     
     .booster{
@@ -1309,6 +1603,23 @@ z-index: 100;
     footer p{
         font-size: 15px;
     }
+    .white-tabs{
+    zoom: 0.4;
+}
+
+.landing-top h1{
+    font-size: 66px;
+}
+
+.landing-top h2{
+    font-size: 30px;
+}
+.slider{
+    zoom: 1.3;
+}
+.boutonl2 a{
+    font-size: 30px;
+}
     }
 
 @media screen and (max-width: 426px){
@@ -1318,6 +1629,9 @@ z-index: 100;
         zoom: 0.4;
         margin-top: 250px;
     }
+    .coSearch{
+    font-size: 20px;
+}
     .main1{
         zoom: 0.45;
 
@@ -1333,14 +1647,32 @@ z-index: 100;
 
     }
 
+    .Detabilities {
+    font-size: 50px;
+    }
+    .Type{
+        font-size: 50px;
+    }
+    .abilities
+    {  
+        font-size: 50px;
+    }
+    *{
+        font-size: 50px;
+    }
+    .page-booster{
+        margin-top: 200px;
+        margin-bottom: 200px;
+    }
+    .boutonl{
+        zoom: 0.7;
+    }
 }
 
 
 
     @media screen and (max-width: 376px){
-        .landing img{
-            border-radius: 0px 60px 60px 0px;
-        }
+       
     .filtre
     {
         zoom: 0.4;
@@ -1357,9 +1689,7 @@ z-index: 100;
 
 
     @media screen and (max-width: 320px){
-        .landing img{
-            border-radius: 0px 60px 60px 0px;
-        }
+        
     .filtre
     {
         zoom: 0.4;
@@ -1368,5 +1698,9 @@ z-index: 100;
         zoom: 0.35;
     }}
 
-  
+
+    @media screen and (min-width: 1600px){
+        body{
+            zoom: 1;}
+    }
 

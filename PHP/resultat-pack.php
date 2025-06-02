@@ -21,26 +21,25 @@ require_once("Top-page.php");
 <div class="cartes3">
     <!-- boucle foreach ou je vais mettre les 3 cartes stocké dans $cartes dans du html 
      je pense que j'ai pas besoin de commenté plus le html :) -->
-    <?php foreach ($cartes as $carte): ?> 
-        <div class="<?= $carte['type'] ?> carte">
-            <div class="vie"><?= $carte['pv'] ?> PV</div>
-            <div class="blaze"><?= $carte['nom'] ?></div>
+    <?php 
 
-            <div class="PokeGif">
-                <img src="<?= $carte['image'] ?>" alt="<?= $carte['nom'] ?>">
-            </div>
+      foreach ($cartes as $carte) {//pour chaque cartes de qui ont ducoup l'id de mon utillisateur j'affiche les données
+        
+        echo '<div class="'.$carte['type'].' carte">';//je met les donnés de la carte grace a de la concatenation 
+        echo '<div class="vie">'. $carte['pv'] . ' PV</div>';//pareil
+        echo '<div class="blaze">'. $carte['nom'] . '</div>';//pareil
+        echo '<div class="PokeGif">';
+        echo '<img src="'.$carte['image'].'">';//pareil
+        echo '</div>';
+        echo '<div class="Type">Type :'. $carte['type'] . '</div>';//pareil
+        echo '<div class="abilities"><strong>' . $carte['capacite1'] . '</strong></div>';//pareil
+        echo '<div class="Detabilities">' . $carte['description1'] . '</div>';//pareil
 
-            <div class="Type">Type : <?= $carte['type'] ?></div>
-            <div class="abilities"><strong><?= $carte['capacite1'] ?></strong></div>
-            <div class="Detabilities"><?= $carte['description1'] ?></div>
-            <!--Ici je verifie si se qui est censé contenir ma capacité 2 n'est pas vide -->
-            <?php if (!empty($carte['capacite2'])): ?>
-                <div class="abilities"><strong><?= $carte['capacite2'] ?></strong></div>
-                <div class="Detabilities"><?= $carte['description2'] ?></div>
-            <?php endif; ?><!-- je ferme la condition -->
-        </div>
-    <?php endforeach; ?>
-    <!-- je ferme la boucle Foreach -->
+        if (isset($carte['capacite2'])) {//je verifie si j'ai bien une deuxieme  capacité 
+            echo '<div class="abilities"><strong>' . $carte['capacite2'] . '</strong></div>';//pareil
+            echo '<div class="Detabilities">' . $carte['description2'] . '</div></div>';//pareil
+        }}?>
+     
 </div>
 
 

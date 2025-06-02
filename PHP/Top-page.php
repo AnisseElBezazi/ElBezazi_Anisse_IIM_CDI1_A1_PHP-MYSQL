@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartes Pokémon rares : Ouvrez des boosters et complétez votre deck</title>
     <link rel="stylesheet" href="../CSS/style.css"/>
-</head>
+</head>  
 <body class="body1">
-    <!-- division pour le header de mon site suivie de division qui vont servir pour le menu-->
     <header> 
         <div class="traits">
             <div class="tra">
@@ -34,7 +33,7 @@
       <img src="<?= $_SESSION['user']['picture'] ?>" alt="profilpicture">
   </div>
 <div class="compte">
-    <a href="Deconnexion.php"><p id="connexion">Profil</p></a>
+    <a href="Deconnexion.php"><p>Quitter</p></a>
 
 </div>
 </div>
@@ -42,10 +41,10 @@
 
 <div class="Depliable">
     <div class= Acceuil>
-    <a href="Page1.php"><p id="Accueil">Accueil</p></a>
+    <a href="Page1.php"><p>Accueil</p></a>
    </div>
    <div class= Pokemon>
-    <a href="Personnage.php"><p id="Accueil">Pokemon</p></a>
+    <a href="Personnage.php"><p>Pokemon</p></a>
 </div>
 <div class= Booster>
     <a href="Booster.php"><p> Booster</p></a>

@@ -29,11 +29,6 @@ MenuMobile.addEventListener ("click",function(){ /* lorsque qu'on click sur les 
 
 
 
-
-
-
-
-
 /*Favoris*/
 
 
