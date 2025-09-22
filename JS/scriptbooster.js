@@ -65,3 +65,6 @@ let Croix2 = document.querySelector(".croix2");
 Croix2.addEventListener("click", function () {
   Cartes3.classList.add("disapear")
 }) ;
+
+
+//test 
